@@ -5,7 +5,7 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
-import ScannerScreen from '../screens/ScannerScreen';
+// import ScannerScreen from '../screens/ScannerScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
 const HomeStack = createStackNavigator({
@@ -40,19 +40,19 @@ LinksStack.navigationOptions = {
   ),
 };
 
-const ScannerStack = createStackNavigator({
-  Scanner: ScannerScreen,
-});
+// const ScannerStack = createStackNavigator({
+//   Scanner: ScannerScreen,
+// });
 
-ScannerStack.navigationOptions = {
-  tabBarLabler: 'Scanner',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link'}
-    />
-  ),
-}
+// ScannerStack.navigationOptions = {
+//   tabBarLabler: 'Scanner',
+//   tabBarIcon: ({ focused }) => (
+//     <TabBarIcon
+//       focused={focused}
+//       name={Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link'}
+//     />
+//   ),
+// }
 
 const SettingsStack = createStackNavigator({
   Settings: SettingsScreen,
@@ -71,6 +71,6 @@ SettingsStack.navigationOptions = {
 export default createBottomTabNavigator({
   HomeStack,
   LinksStack,
-  ScannerStack,
+//   ScannerStack,
   SettingsStack,
 });
