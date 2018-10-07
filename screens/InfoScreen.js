@@ -1,7 +1,7 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Image } from 'react-native';
+import { View, StyleSheet, Image } from 'react-native';
 
-const DEFAULT_IMAGE = 'c:\\Programming\\sala\\assets\\images\\QR_icon.png'; 
+const DEFAULT_IMAGE = '../assets/images/QR_icon.png'; 
 export default class InfoScreen extends React.Component {
   static navigationOptions = {
     title: 'Info',
@@ -11,27 +11,36 @@ export default class InfoScreen extends React.Component {
       const {navigation} = this.props;
       const imageName = navigation.getParam('imageName', 'default')
       let image = null;
-      alert(imageName);
+      // alert('from infoScreen:\n' + imageName);
         switch(imageName){
-            case 'c:\\Programming\\sala\\assets\\images\\Bahad_1_Symbol.png':
+            case '../assets/images/Bahad_1_Symbol.png':
                 image = 
-                    <Image source={{uri:'c:\\Programming\\sala\\assets\\images\\Bahad_1_Symbol.png'}}
+                    <Image source={require('../assets/images/Bahad_1_Symbol.png')}
                     style={styles.infoImage}/>
+                break;
                 
-            case 'שג':
+            case 'Gate':
+                alert('gate');
                 image = 
-                    <Image source={{uri:'c:\\Programming\\sala\\assets\\images\\שג.jpg'}}
+                    <Image source={require('../assets/images/Gate.jpg')}
                     style={styles.infoImage}/>
+                break;
                 
             default:
+              alert('default');
                 image = 
-                    <Image source={{uri:DEFAULT_IMAGE}}
+                    <Image source={require(DEFAULT_IMAGE)}
                     style={styles.infoImage}/>
                 
         }
-        return image;
+        return( 
+          <View>
+            {image}
+          </View>
+        )
   }
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -40,10 +49,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   infoImage: {
-    width: 100,
-    height: 80,
-    resizeMode: 'contain',
-    marginTop: 3,
-    marginLeft: -10,
+    width: '100%',
+    height: '100%',
   }
 });

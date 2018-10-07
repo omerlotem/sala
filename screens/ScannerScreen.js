@@ -43,12 +43,8 @@ export default class ScannerScreen extends Component {
       };
     
   onSuccess(e) {
-      alert(e.data);
     //   if(e.data !== BAHAD_IMAGE_PATH)
     //     return;
-      this.setState({
-          imagePath:e.data
-      })
       this.props.navigation.navigate('Info', {imageName:e.data});
     // Linking
     //   .openURL(e.data)
@@ -59,7 +55,7 @@ export default class ScannerScreen extends Component {
     return (
     <QRCodeScanner
         reactivate={true}
-        reactivateTimeout={1}
+        reactivateTimeout={5000}
         onRead={this.onSuccess.bind(this)}
         topContent={
         <Text style={styles.centerText}>
