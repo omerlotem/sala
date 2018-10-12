@@ -11,7 +11,6 @@ export default class InfoScreen extends React.Component {
       const {navigation} = this.props;
       const imageName = navigation.getParam('imageName', 'default')
       let image = null;
-      // alert('from infoScreen:\n' + imageName);
         switch(imageName){
             case '../assets/images/Bahad_1_Symbol.png':
                 image = 
@@ -20,14 +19,12 @@ export default class InfoScreen extends React.Component {
                 break;
                 
             case 'Gate':
-                alert('gate');
                 image = 
                     <Image source={require('../assets/images/Gate.jpg')}
                     style={styles.infoImage}/>
                 break;
                 
             default:
-              alert('default');
                 image = 
                     <Image source={require(DEFAULT_IMAGE)}
                     style={styles.infoImage}/>
