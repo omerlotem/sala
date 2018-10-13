@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 
-const DEFAULT_IMAGE = '../assets/images/QR_icon.png'; 
 export default class InfoScreen extends React.Component {
   static navigationOptions = {
     title: 'Info',
@@ -154,7 +153,7 @@ export default class InfoScreen extends React.Component {
                 break;
             default:
                 image = 
-                    <Image source={require(DEFAULT_IMAGE)}
+                    <Image source={require('../assets/images/שגיאה.png')}
                     style={styles.infoImage}/>
                 
         }
