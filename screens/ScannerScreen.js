@@ -25,7 +25,7 @@ class ScannerScreen extends Component {
         }
     }
     static navigationOptions = {
-        title: 'Scanner',
+        header: null,
       };
     
   onSuccess(e) {

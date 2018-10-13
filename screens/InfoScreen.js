@@ -3,7 +3,7 @@ import { View, StyleSheet, Image } from 'react-native';
 
 export default class InfoScreen extends React.Component {
   static navigationOptions = {
-    title: 'Info',
+    header: null,
   };
     
   render() {
