@@ -18,30 +18,15 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+      <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+        <ScrollView horizontal={true} style={styles.container} contentContainerStyle={styles.contentContainer}>
           <View style={styles.getStartedContainer}>
-
-            <Text style={styles.getStartedText}>
-              זאת סל"ה
-            </Text>
           </View>
 
-          <Image source={require('../assets/images/Bahad_1_Symbol.png')}
-          style={{width:100, height:100}}/>
-          {/* <View style={styles.welcomeContainer}>
-            <Image
-              source={
-                require('../assets/images/מפת הבהד.jpg')
-              }
-              style={styles.welcomeImage}
-            />
-          </View> */}
-
-          <Text style={styles.getStartedText}>
-              והסמל הזה הוא מפה כעיקרון
-            </Text>
+          <Image source={require('../assets/images/מפת_הבהד.png')}
+          style={{flex:1, aspectRatio: 1.2, resizeMode:'contain'}}/>
         </ScrollView>
-
+        </ScrollView>
         <View style={styles.tabBarInfoContainer}>
             <TouchableOpacity onPress={() => this.showInstructions()}>
               <Text style={styles.tabBarInfoText}>
@@ -77,7 +62,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   contentContainer: {
-    paddingTop: 30,
   },
   welcomeContainer: {
     alignItems: 'center',
@@ -85,8 +69,6 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   welcomeImage: {
-    // width: 100,
-    // height: 80,
     width: 500,
     height: 400,
     resizeMode: 'contain',
