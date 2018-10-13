@@ -45,10 +45,6 @@ export default class HomeScreen extends React.Component {
               <Text style={styles.tabBarInfoText}>
                 צריך עזרה?
               </Text>
-              {/* <Image 
-                source={require('../assets/images/QR_icon.png')} 
-                style={styles.welcomeImage}
-              /> */}
             </TouchableOpacity>
           </View>
       </View>
