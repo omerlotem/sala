@@ -26,14 +26,16 @@ export default class HomeScreen extends React.Component {
             </Text>
           </View>
 
-          <View style={styles.welcomeContainer}>
+          <Image source={require('../assets/images/Bahad_1_Symbol.png')}
+          style={{width:100, height:100}}/>
+          {/* <View style={styles.welcomeContainer}>
             <Image
               source={
-                require('../assets/images/Bahad_1_Symbol.png')
+                require('../assets/images/מפת הבהד.jpg')
               }
               style={styles.welcomeImage}
             />
-          </View>
+          </View> */}
 
           <Text style={styles.getStartedText}>
               והסמל הזה הוא מפה כעיקרון
@@ -83,8 +85,10 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   welcomeImage: {
-    width: 100,
-    height: 80,
+    // width: 100,
+    // height: 80,
+    width: 500,
+    height: 400,
     resizeMode: 'contain',
     marginTop: 3,
     marginLeft: -10,

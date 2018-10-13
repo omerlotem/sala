@@ -6,11 +6,10 @@ import {
 export default class TabBarIcon extends React.Component {
   constructor(props){
     super(props);
-    this.state = props;
   }
   render() {
     return (
-      <Image source={this.state.image} style = {styles.icon}/>
+      <Image source={this.props.image} style = {styles.icon}/>
     );
   }
 }
