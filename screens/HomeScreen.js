@@ -10,8 +10,6 @@ import {
   Alert
 } from 'react-native';
 
-import { MonoText } from '../components/StyledText';
-
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null,
@@ -43,45 +41,42 @@ export default class HomeScreen extends React.Component {
         </ScrollView>
 
         <View style={styles.tabBarInfoContainer}>
-          <Text style={styles.tabBarInfoText}>נראה לי סיימנו</Text>
-          
-          <View style={styles.welcomeContainer}>
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('Links')}>
-              <Image 
+            <TouchableOpacity onPress={() => this.showInstructions()}>
+              <Text style={styles.tabBarInfoText}>
+                צריך עזרה?
+              </Text>
+              {/* <Image 
                 source={require('../assets/images/QR_icon.png')} 
                 style={styles.welcomeImage}
-              />
+              /> */}
             </TouchableOpacity>
           </View>
-        </View>
       </View>
     );
   }
 
   componentDidMount(){
+    this.showInstructions();
+  }
+
+  showInstructions(){
     Alert.alert(
-      'ברוכים הבאים לאפליקציית סל\"ה',
+      'אפליקציית סל\"ה',
       'מטרת האפליקציה היא לעזור לכם להכיר את הבה\"ד.\n\
 ברחבי הבסיס מפוזרים מספר קודי QR, ואם תסרקו אותם תקבלו מידע על המקום.\n\
 המטרה היא להגיע לכל הנקודות.\n\
 בהצלחה!',
       [{text: 'רות!'}]
     )
-  }
-}
+  };
+  
+};
 
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-  },
-  developmentModeText: {
-    marginBottom: 20,
-    color: 'rgba(0,0,0,0.4)',
-    fontSize: 14,
-    lineHeight: 19,
-    textAlign: 'center',
   },
   contentContainer: {
     paddingTop: 30,
@@ -101,17 +96,6 @@ const styles = StyleSheet.create({
   getStartedContainer: {
     alignItems: 'center',
     marginHorizontal: 50,
-  },
-  homeScreenFilename: {
-    marginVertical: 7,
-  },
-  codeHighlightText: {
-    color: 'rgba(96,100,109, 0.8)',
-  },
-  codeHighlightContainer: {
-    backgroundColor: 'rgba(0,0,0,0.05)',
-    borderRadius: 3,
-    paddingHorizontal: 4,
   },
   getStartedText: {
     fontSize: 17,
@@ -141,21 +125,7 @@ const styles = StyleSheet.create({
   },
   tabBarInfoText: {
     fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
+    color: '#0000EE',
     textAlign: 'center',
-  },
-  navigationFilename: {
-    marginTop: 5,
-  },
-  helpContainer: {
-    marginTop: 15,
-    alignItems: 'center',
-  },
-  helpLink: {
-    paddingVertical: 15,
-  },
-  helpLinkText: {
-    fontSize: 14,
-    color: '#2e78b7',
   },
 });

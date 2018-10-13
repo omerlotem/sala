@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import {
-  AppRegistry,
-  Image,
   StyleSheet,
   Text,
-  TouchableOpacity,
-  Linking,
   View
 } from 'react-native';
 import {withNavigationFocus} from 'react-navigation'
@@ -13,28 +9,13 @@ import {withNavigationFocus} from 'react-navigation'
 
 import QRCodeScanner from 'react-native-qrcode-scanner';
 
-const DEFAULT_IMAGE_PATH = 'c:\\Programming\\sala\\assets\\images\\QR_icon.png';
-const BAHAD_IMAGE_PATH = 'c:\\Programming\\sala\\assets\\images\\Bahad_1_Symbol.png';
-
 class ScannerScreen extends Component {
-
-    constructor(props){
-        super(props);
-        this.state = {
-            imagePath:DEFAULT_IMAGE_PATH
-        }
-    }
     static navigationOptions = {
         header: null,
       };
     
   onSuccess(e) {
-    //   if(e.data !== BAHAD_IMAGE_PATH)
-    //     return;
       this.props.navigation.navigate('Info', {imageName:e.data});
-    // Linking
-    //   .openURL(e.data)
-    //   .catch(err => console.error('An error occured', err));
   }
 
   render() {
