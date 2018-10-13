@@ -12,9 +12,10 @@ const HomeStack = createStackNavigator({
 });
 
 HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
+  tabBarLabel: 'מפה',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
+      image={require('../assets/images/map_icon.png')}
       focused={focused}
       name={
         Platform.OS === 'ios'
@@ -30,9 +31,10 @@ const ScannerStack = createStackNavigator({
 });
 
 ScannerStack.navigationOptions = {
-  tabBarLabler: 'Scanner',
+  tabBarLabel: 'סורק',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
+      image={require('../assets/images/QR_icon.png')}
       focused={focused}
       name={
         Platform.OS === 'ios'
@@ -48,9 +50,10 @@ const InfoStack = createStackNavigator({
 });
 
 InfoStack.navigationOptions = {
-  tabBarLabler: 'Info',
+  tabBarLabel: 'מידע',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
+      image={require('../assets/images/info_icon.png')}
       focused={focused}
       name={
         Platform.OS === 'ios'
