@@ -19,12 +19,12 @@ export default class InfoScreen extends React.Component {
                 break;
             case 'בית הכנסת הישן':
                 image = 
-                    <Image source={require('../assets/images/בית הכנסת הישן.png')}
+                    <Image source={require('../assets/images/בית_הכנסת_הישן.png')}
                     style={styles.infoImage}/>
                 break;
             case 'בית הכנסת':
                 image = 
-                    <Image source={require('../assets/images/בית הכנסת.png')}
+                    <Image source={require('../assets/images/בית_הכנסת.png')}
                     style={styles.infoImage}/>
                 break;
             case 'בריכה':
@@ -44,12 +44,12 @@ export default class InfoScreen extends React.Component {
                 break;
             case 'חדרי האוכל':
                 image = 
-                    <Image source={require('../assets/images/חדרי האוכל.png')}
+                    <Image source={require('../assets/images/חדרי_האוכל.png')}
                     style={styles.infoImage}/>
                 break;
             case 'חניה לבנה':
                 image = 
-                    <Image source={require('../assets/images/חניה לבנה.png')}
+                    <Image source={require('../assets/images/חניה_לבנה.png')}
                     style={styles.infoImage}/>
                 break;
             case 'ימח':
@@ -64,7 +64,7 @@ export default class InfoScreen extends React.Component {
                 break;
             case 'מטבח מרכזי':
                 image = 
-                    <Image source={require('../assets/images/מטבח מרכזי.png')}
+                    <Image source={require('../assets/images/מטבח_מרכזי.png')}
                     style={styles.infoImage}/>
                 break;
             case 'מספרה':
@@ -124,7 +124,7 @@ export default class InfoScreen extends React.Component {
                 break;
             case 'רחבה חומה':
                 image = 
-                    <Image source={require('../assets/images/רחבה חומה.png')}
+                    <Image source={require('../assets/images/רחבה_חומה.png')}
                     style={styles.infoImage}/>
                 break;
             case 'רקורטן':
