@@ -23,14 +23,17 @@ import {
   Text,
   TouchableOpacity,
   Linking,
+  View
 } from 'react-native';
+import {withNavigationFocus} from 'react-navigation'
+
 
 import QRCodeScanner from 'react-native-qrcode-scanner';
 
 const DEFAULT_IMAGE_PATH = 'c:\\Programming\\sala\\assets\\images\\QR_icon.png';
 const BAHAD_IMAGE_PATH = 'c:\\Programming\\sala\\assets\\images\\Bahad_1_Symbol.png';
 
-export default class ScannerScreen extends Component {
+class ScannerScreen extends Component {
 
     constructor(props){
         super(props);
@@ -52,6 +55,10 @@ export default class ScannerScreen extends Component {
   }
 
   render() {
+    const {isFocused} = this.props
+    if(!isFocused){
+      return(<View></View>)
+    }
     return (
     <QRCodeScanner
         reactivate={true}
@@ -96,3 +103,5 @@ const styles = StyleSheet.create({
 //     backgroundColor: '#fff',
 //   },
 });
+
+export default withNavigationFocus(ScannerScreen);
