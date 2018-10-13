@@ -1,20 +1,3 @@
-// import React from 'react';
-// import { ScrollView, StyleSheet, Text } from 'react-native';
-
-// export default class ScannerScreen extends React.Component {
-//   static navigationOptions = {
-//     title: 'Scanner',
-//   };
-
-//   render() {
-//     return (
-//       <ScrollView style={styles.container}>
-//         <Text> blahblahblah </Text>
-//       </ScrollView>
-//     );
-//   }
-// }
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -66,13 +49,10 @@ class ScannerScreen extends Component {
         onRead={this.onSuccess.bind(this)}
         topContent={
         <Text style={styles.centerText}>
-            Go to <Text style={styles.textBold}>wikipedia.org/wiki/QR_code</Text> on your computer and scan the QR code.
+            כאן ניתן לסרוק את קודי הQR.
+            חפשו אותם ברחבי הבסיס באמצעות המפה שקיבלתם.
+
         </Text>
-        }
-        bottomContent={
-        <TouchableOpacity style={styles.buttonTouchable}>
-            <Text style={styles.buttonText}>OK. Got it!</Text>
-        </TouchableOpacity>
         }
     />
     )}
@@ -84,24 +64,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     padding: 32,
     color: '#777',
-  },
-  textBold: {
-    fontWeight: '500',
-    color: '#000',
-  },
-  buttonText: {
-    fontSize: 21,
-    color: 'rgb(0,122,255)',
-  },
-  buttonTouchable: {
-    padding: 16,
-  },
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     paddingTop: 15,
-//     backgroundColor: '#fff',
-//   },
+  }
 });
 
 export default withNavigationFocus(ScannerScreen);
