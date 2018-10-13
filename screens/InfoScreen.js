@@ -159,7 +159,7 @@ export default class InfoScreen extends React.Component {
                 
         }
         return( 
-          <View>
+          <View style={styles.container}>
             {image}
           </View>
         )
@@ -170,11 +170,12 @@ export default class InfoScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 15,
-    backgroundColor: '#fff',
+    flexDirection: 'row-reverse',
+    backgroundColor: '#000080',
   },
   infoImage: {
-    width: '100%',
-    height: '100%',
+    flex: 1,
+    aspectRatio: 0.7,
+    resizeMode: 'cover',
   }
 });
