@@ -131,12 +131,12 @@ export default class InfoScreen extends React.Component {
                     <Image source={require('../assets/images/רקורטן.png')}
                     style={styles.infoImage}/>
                 break;
-            case 'שג':
+            case 'ש\"ג':
                 image = 
                     <Image source={require('../assets/images/שג.png')}
                     style={styles.infoImage}/>
                 break;
-            case 'שלישות':
+            case 'שלישות צוערים':
                 image = 
                     <Image source={require('../assets/images/שלישות.png')}
                     style={styles.infoImage}/>
