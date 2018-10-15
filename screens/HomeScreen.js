@@ -2,13 +2,15 @@ import React from 'react';
 import {
   Image,
   Platform,
-  ScrollView,
+  Dimensions,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
   Alert
 } from 'react-native';
+
+import ImageZoom from 'react-native-image-pan-zoom'
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -18,7 +20,15 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-      <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+      <ImageZoom
+      cropWidth={Dimensions.get('window').width}
+      cropHeight={Dimensions.get('window').height}
+      imageWidth={300}
+      imageHeight={300}>
+      <Image source={require('../assets/images/bahad_map.png')}
+          style={{flex:1, aspectRatio: 1.2, resizeMode:'contain'}}/>
+      </ImageZoom>
+      {/* <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
         <ScrollView horizontal={true} style={styles.container} contentContainerStyle={styles.contentContainer}>
           <View style={styles.getStartedContainer}>
           </View>
@@ -26,7 +36,7 @@ export default class HomeScreen extends React.Component {
           <Image source={require('../assets/images/bahad_map.png')}
           style={{flex:1, aspectRatio: 1.2, resizeMode:'contain'}}/>
         </ScrollView>
-        </ScrollView>
+        </ScrollView> */}
         <View style={styles.tabBarInfoContainer}>
             <TouchableOpacity onPress={() => this.showInstructions()}>
               <Text style={styles.tabBarInfoText}>
@@ -59,7 +69,7 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#D3D3D3',
   },
   contentContainer: {
   },
