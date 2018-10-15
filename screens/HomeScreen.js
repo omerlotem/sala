@@ -23,7 +23,7 @@ export default class HomeScreen extends React.Component {
           <View style={styles.getStartedContainer}>
           </View>
 
-          <Image source={require('../assets/images/מפת_הבהד.png')}
+          <Image source={require('../assets/images/bahad_map.png')}
           style={{flex:1, aspectRatio: 1.2, resizeMode:'contain'}}/>
         </ScrollView>
         </ScrollView>
